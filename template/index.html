@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+
+*, *:after, *:before {
+	border-box;
+	box-sizing: border-box;
+}
+.clearfix:before, .clearfix:after {
+	content: '';
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text-one figure img {
+    border-style:outset;
+    border-width:6px;
+    border-color:#4a4a4a;
+	position: relative;
+	display: block;
+	min-height: 500;
+	opacity: 0.8;
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 500px;
+}
+.hover-text-one figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text-one figure h3 span {
+	font-weight: 500;
+}
+.hover-text-one figure h3,
+.hover-text-one figure p {
+	margin: 0;
+}
+.hover-text-one figure p {
+	letter-spacing: 1px;
+	font-size: 75%;
+}
+
+/* Эффект при наведении */
+figure.effect-text-four figcaption {
+	text-align: right;
+}
+figure.effect-text-four h3,
+figure.effect-text-four p {
+	position: absolute;
+	right: 30px;
+	left: 30px;
+	padding: 10px 0;
+}
+figure.effect-text-four p {
+	bottom: 30px;
+	line-height: 1.5;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+figure.effect-text-four h3 {
+	top: 30px;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+figure.effect-text-four:hover h3 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text-four h3::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: #fff;
+	content: '';
+	-webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+figure.effect-text-four h3::after,
+figure.effect-text-four p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-text-four:hover h3::after,
+figure.effect-text-four:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.row{
+    display:flex;
+}
+
+p {
+  font-size: 8vw;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+    </style>
+</head>
+<body bgcolor="#eaeef1">
+<p><span class="fancy">Футбольчик мальчики похожи на качков</span></p>
+<div class="row">
+<div class="hover-text-one">
+  <figure class="effect-text-four">
+    <img src="https://sun9-60.userapi.com/impg/V8bM0MAghuK8Re3aVTxNrTNwpByWKutFGsIL5A/jftBSW9XZgI.jpg?size=352x639&quality=95&sign=38b0eb48a971a045418ca05c3740cc24&type=album" width="380" height="750" alt=""/>
+      <figcaption>
+	<h3>Isagi Yoichi</h3>
+	<p>Чел умеет собираться и разбирать как пазл + может пробудить пазлы в глазах</p>
+      </figcaption>
+   </figure>
+</div>
+<div class="hover-text-one">
+  <figure class="effect-text-four">
+    <img src="https://i.pinimg.com/564x/35/8c/e6/358ce6364d324b628b337977c558f3a4.jpg" width="470" height="750" alt=""/>
+      <figcaption>
+	<h3>Nagi Seishiro</h3>
+	<p>Самый сасный парень на районе</p>
+      </figcaption>
+   </figure>
+</div>
+<div class="hover-text-one">
+  <figure class="effect-text-four">
+    <img src="https://i.pinimg.com/474x/c6/ee/f5/c6eef510f79f59c011efb889f7ff6536.jpg" width="470" height="750" alt=""/>
+      <figcaption>
+	<h3>Baro Shoei</h3>
+	<p>Король.</p>
+      </figcaption>
+   </figure>
+</div>
+</div>
+</body>
+</html>
