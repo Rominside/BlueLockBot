@@ -1,8 +1,5 @@
 name: first-working-poccess
-on: 
-  push:
-    branches:
-      - "main"
+on: [push]
 jobs:
   unit_test:
     runs-on: Ubuntu:22.04 
