@@ -77,7 +77,7 @@ async def Check_last_chapter(self=Client):
         await channel.send(last_chapter)
         flag_new_chapter = False
       # await asyncio.sleep(300)
-      # github actions -- try one
+      # github actions -- try two
 
 
 Client.run(settings['token'])
