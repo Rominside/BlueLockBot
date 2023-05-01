@@ -1,0 +1,20 @@
+name: first-working-poccess
+on: 
+  push:
+    branches:
+      - "main"
+jobs:
+  unit_test:
+    runs-on: Ubuntu:22.04 
+    steps:
+      - run: echo "Running unit-tests"
+  deploy:
+    runs-on: Ubuntu:22.04
+    steps:
+      - run: echo "Running deploy"
+  production:
+    runs-on: Ubuntu:22.04
+    steps:
+      - run: echo "Running production"
+
+      
