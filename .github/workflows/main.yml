@@ -2,15 +2,15 @@ name: first-working-poccess
 on: [push]
 jobs:
   unit_test:
-    runs-on: self-hosted 
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Running unit-tests"
   deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Running deploy"
   production:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Running production"
 
