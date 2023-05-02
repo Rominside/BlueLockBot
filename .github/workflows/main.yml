@@ -1,10 +1,14 @@
 name: first-working-poccess
-on: [push]
+on:
+  push:
+    branches:
+      - 'main'
 jobs:
   unit_test:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Running unit-tests"
+      - run: main.py
   deploy:
     runs-on: ubuntu-latest
     steps:
