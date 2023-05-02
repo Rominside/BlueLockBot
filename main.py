@@ -1,6 +1,6 @@
 from webserver import keep_alive
 from bs4 import BeautifulSoup
-from config import settings
+from configs.config import settings
 from discord.ext import commands
 from discord.ext import tasks
 from datetime import datetime

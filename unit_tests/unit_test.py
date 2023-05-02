@@ -1,5 +1,5 @@
 from config import settings
 
-def Test_one():
-    bot_name = "bot"
-    bot_name == settings["bot"]
+def test_one():
+    bot_name = "BlueLockBot"
+    assert bot_name == settings["bot"]
