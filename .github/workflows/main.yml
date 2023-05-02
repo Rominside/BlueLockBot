@@ -15,7 +15,7 @@ jobs:
       - name: Run_pytest
         run: pytest unit_tests/unit_test.py
         env:
-            BOTNAME: BlueLockBot
+            BOTNAME: BlueLockBor
   deploy:
     runs-on: ubuntu-latest
     steps:
