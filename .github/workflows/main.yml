@@ -7,8 +7,9 @@ jobs:
   unit_test:
     runs-on: ubuntu-latest
     steps:
+      - run: pip install pytest
+      - run: pytest unit_tests/unit_test
       - run: echo "Running unit-tests"
-      - run: main.py
   deploy:
     runs-on: ubuntu-latest
     steps:
