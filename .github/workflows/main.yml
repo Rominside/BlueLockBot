@@ -7,10 +7,15 @@ jobs:
   unit_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: pip install pytest
-      - run: pytest unit_tests/unit_test.py
       - run: echo "Running unit-tests"
+      - name: Install_pytest
+        run: pip install pytest
+      - name : Uses_my_code
+        uses: actions/checkout@v3
+      - name: Run_pytest
+        run: pytest unit_tests/unit_test.py
+        env:
+            BOTNAME: BlueLockBot
   deploy:
     runs-on: ubuntu-latest
     steps:
