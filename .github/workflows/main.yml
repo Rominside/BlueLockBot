@@ -37,7 +37,7 @@ jobs:
         with:
           name: out-log-artifact
       - name: Run
-        run: outlog.py
+        run: cat outlog.py
     needs: deploy
         
 
