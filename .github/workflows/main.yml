@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Running deploy"
-      - run: print("Hello world") > outlog.py
+      - run: echo print("Hello world") > outlog.py
       - name: OutputFile
         uses: actions/upload-artifact@v3
         with:
