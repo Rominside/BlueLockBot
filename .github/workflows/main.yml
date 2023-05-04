@@ -15,14 +15,25 @@ jobs:
       - name: Run_pytest
         run: pytest unit_tests/unit_test.py
         env:
-            BOTNAME: BlueLockBor
+            BOTNAME: BlueLockBot
+            shell: bash
   deploy:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Running deploy"
+      - run: expr 1 + 1 > outlog.txt
+      - name: OutputFile
+        uses: actions/upload-artifact@v3
+        with:
+          name: out-log-artifact
+          path: outlog.txt
   production:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Running production"
+      - name: Check_artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: out-log-artifact
 
       
