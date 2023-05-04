@@ -21,12 +21,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Running deploy"
-      - run: expr 1 + 1 > outlog.txt
+      - run: print("Hello world") > outlog.py
       - name: OutputFile
         uses: actions/upload-artifact@v3
         with:
           name: out-log-artifact
-          path: outlog.txt
+          path: outlog.py
+    needs: unit_test
   production:
     runs-on: ubuntu-latest
     steps:
@@ -35,5 +36,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: out-log-artifact
+      - name: Run
+        run: outlog.py
+    needs: deploy
+        
 
       
